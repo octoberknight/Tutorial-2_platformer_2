@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Tutorial_2_platforming.unity
+- path: Assets/Scenes/Challenge_2_Tutorial_2.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

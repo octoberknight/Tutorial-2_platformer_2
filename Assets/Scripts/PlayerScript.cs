@@ -11,6 +11,18 @@ public float speed;
 
 public Text score;
 
+public AudioSource musicSource;
+
+public AudioClip musicClipOne;
+
+public Text win;
+
+public Text lose;
+
+public Text life;
+
+public int lifeValue;
+
 private int scoreValue = 0;
 
 // Start is called before the first frame update
@@ -18,6 +30,9 @@ void Start()
 {
 rd2d = GetComponent<Rigidbody2D>();
 score.text = scoreValue.ToString();
+life.text = ("lives:" + lifeValue.ToString());
+win.text = "";
+lose.text = "";
 }
 
 // Update is called once per frame
@@ -36,7 +51,22 @@ scoreValue += 1;
 score.text = scoreValue.ToString();
 Destroy(collision.collider.gameObject);
 }
-
+if (scoreValue == 20)
+{
+    win.text = "You Win!! A game made by Samuel Mcillwain";
+    musicSource.clip = musicClipOne;
+    musicSource.Play();
+}
+if (collision.collider.tag == "Cat")
+{lifeValue -= 1;
+life.text = lifeValue.ToString();
+Destroy(collision.collider.gameObject);
+}
+if (lifeValue == 0)
+{
+ lose.text =" You Lose!";
+ Destroy(gameObject);
+}
 }
 
 private void OnCollisionStay2D(Collision2D collision)
@@ -47,10 +77,12 @@ if (Input.GetKey(KeyCode.W))
 {
 rd2d.AddForce(new Vector2(0, 3), ForceMode2D.Impulse); //the 3 in this line of code is the player's "jumpforce," and you change that number to get different jump behaviors. You can also create a public variable for it and then edit it in the inspector.
 }
-if (Input.GetKey("escape"))
+if (scoreValue == 11)
 {
-Application.Quit();
+    transform.position = new Vector3(77.0f, 0.0f, 0.0f); 
 }
+
+
 }
 }
 }

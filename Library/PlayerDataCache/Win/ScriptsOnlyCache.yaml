@@ -2,11 +2,11 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CameraScript
+    - CatMover
     - PlayerScript
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
-    - UnityEditor.Tilemaps.GridBrush
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
@@ -14,6 +14,12 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -26,7 +32,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.HorizontalLayoutGroup
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/Tutorial_2_platforming.unity:
+    Assets/Scenes/Challenge_2_Tutorial_2.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -45,7 +51,19 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 62
       Script: {instanceID: 0}
+    - Class: 70
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -56,17 +74,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11460}
     - Class: 114
-      Script: {instanceID: 12176}
+      Script: {instanceID: 11632}
     - Class: 114
-      Script: {instanceID: 13186}
+      Script: {instanceID: 12178}
     - Class: 114
-      Script: {instanceID: 13220}
+      Script: {instanceID: 13188}
     - Class: 114
-      Script: {instanceID: 13640}
+      Script: {instanceID: 13222}
     - Class: 114
-      Script: {instanceID: 14250}
+      Script: {instanceID: 13642}
     - Class: 114
-      Script: {instanceID: 14322}
+      Script: {instanceID: 14252}
+    - Class: 114
+      Script: {instanceID: 14324}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -196,6 +216,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: e08dc097b830ae769e9cdd9b04e903ac
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CatMover
   - hash:
       serializedVersion: 2
       Hash: 523ce309f50d9eee6a8fc0e2f86c9c97
@@ -576,7 +602,7 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
-      Hash: ba8885765ad8fe055d2176fbae6efcd9
+      Hash: 70a3e54d9989cb4120544bba1dc653f0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerScript
@@ -588,5 +614,5 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 5
   scenePathNames:
-  - Assets/Scenes/Tutorial_2_platforming.unity
-  playerPath: D:/Tutorial-2_platformer_2/Build/Tutorial-2_platformer_2.exe
+  - Assets/Scenes/Challenge_2_Tutorial_2.unity
+  playerPath: D:/Tutorial-2_platformer_2/Challenge_2Build/Tutorial-2_platformer_2.exe
